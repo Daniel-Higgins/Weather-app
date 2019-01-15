@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Feelin' Hot Hot Hot</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+      <header>
+        <center> $ Welcome to the TEMPURATURE READER $</center>
+      </header>
+      <style>
+        a:link {
+        color: white;
+        }
+        a:visited{
+            color:snow;
+        }
+    
+    </style>
+
+  </head>
+  <body>
+      <header>
+          
+      <div style="background-color:Black;color:white;padding:10px;">
+            <a href="/">Home</a> | <a href="/login">Login</a> | <a href="/signup">Sign up</a> | <a href="/profile">Profile</a> | <a href="https://www.weather.com"> Weather Channel</a>
+      </div>
+          
+      </header>
+
+    <div class="container">
+      <fieldset>
+        <form action="/" method="post">
+          <input name="city" type="text" class="ghost-input" placeholder="Enter a City bro, and ill tell you how hot!" required>
+            
+          <input type="submit" class="ghost-button" value="Get Weather">
+            
+        </form>
+        <% if(weather !== null){ %>
+          <p><%= weather %></p>
+        <% } %>
+
+        <% if(error !== null){ %>
+          <p><%= error %></p>
+        <% } %>
+      </fieldset>
+    </div>
+      
+    <div class="container">
+        <fieldset>
+            <form action="/signup" method="get">
+                <center><h5>Don't have an account with us?? </h5>
+                    <h6>Signup today and subscribe to get the best news of the weather.</h6></center>
+                
+                <input type="submit" class="ghost-button" value="Sign Up Today">
+            </form>    
+        </fieldset>
+    </div>
+      
+      <footer> 
+            <h6>What's the tempurature you might say? @2019 </h6>
+      </footer>
+  </body>
+</html>
