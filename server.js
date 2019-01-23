@@ -75,6 +75,31 @@ app.post('/signup', function(req,res) {
                 if (err) throw err;
                 console.log("1 record inserted");
             });
+          
+          
+                  var transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: 'server00928@gmail.com',
+                pass: 'tt1tt2tt3'
+            }
+          });
+
+     var mailOptions = {
+    from: 'server00928@gmail.com',
+    to: em,//you can add multiple here
+    subject: 'Sending Email using Node.js',
+    //add HTML format here
+    text: 'Thanks for signing up!'
+    };
+
+         transporter.sendMail(mailOptions, function(error, info){
+            if (error) {
+                console.log(error);
+            } else {
+                console.log('Email sent: ' + info.response);
+            }
+          });
         res.render('index', {weather: null, error: "Thank you for registering. Enjoy!!"});
          });
   } else {
