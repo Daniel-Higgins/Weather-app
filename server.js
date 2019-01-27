@@ -80,8 +80,8 @@ app.post('/signup', function(req,res) {
                   var transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: 'server00928@gmail.com',
-                pass: 'tt1tt2tt3'
+                user: 'your email',
+                pass: 'your pw'
             }
           });
 
